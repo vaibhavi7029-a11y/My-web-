@@ -1,20 +1,21 @@
-* {
+
+    * {
     margin: 0;
     padding: 0;
     font-family: Arial;
 }
 
 body {
-    background: #f4f4f4;
+    background: #111;
+    color: white;
 }
 
 /* Header */
 header {
-    background: black;
-    color: white;
     display: flex;
     justify-content: space-between;
     padding: 15px;
+    background: black;
 }
 
 nav a {
@@ -23,93 +24,59 @@ nav a {
     text-decoration: none;
 }
 
-/* Hero Section */
+/* Hero */
 #home {
     height: 90vh;
-    background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") no-repeat center/cover;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    color: white;
-    text-align: center;
-}
-
-.hero-text {
-    animation: fadeIn 2s ease-in-out;
-}
-
-button {
-    padding: 10px 20px;
-    margin-top: 10px;
-    background: white;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background: black;
-    color: white;
-}
-
-/* About */
-#about {
-    display: flex;
     align-items: center;
-    padding: 40px;
-    gap: 20px;
 }
 
-#about img {
-    width: 300px;
-    border-radius: 10px;
-    animation: slideIn 1.5s ease-in-out;
-}
-
-/* Services */
-#services {
-    padding: 40px;
-    text-align: center;
-}
-
+/* Cards */
 .cards {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card {
-    background: white;
-    margin: 15px;
+    background: #222;
+    margin: 10px;
     padding: 20px;
-    width: 220px;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.card img {
-    width: 100%;
-    border-radius: 10px;
+    width: 200px;
+    transition: 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.1);
+    transform: translateY(-10px);
 }
 
-/* Footer */
-footer {
-    background: black;
-    color: white;
-    text-align: center;
+/* Contact */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: auto;
+}
+
+input, textarea {
+    margin: 5px;
     padding: 10px;
+    border: none;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+button {
+    padding: 10px;
+    background: cyan;
+    border: none;
+    cursor: pointer;
 }
 
-@keyframes slideIn {
-    from {transform: translateX(-100px); opacity: 0;}
-    to {transform: translateX(0); opacity: 1;}
-  }
+/* Responsive */
+@media(max-width: 600px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
