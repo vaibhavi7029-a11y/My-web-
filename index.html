@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaibhavi Web Services</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vaibhavi Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -12,28 +12,16 @@
     <h1>Vaibhavi Codes</h1>
     <nav>
         <a href="#home">Home</a>
-        <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
-<!-- Hero Section -->
+<!-- Hero -->
 <section id="home">
-    <div class="hero-text">
-        <h2>Build Your Dream Website</h2>
-        <p>I create modern and responsive websites</p>
-        <button>Hire Me</button>
-    </div>
-</section>
-
-<!-- About -->
-<section id="about">
-    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="about">
-    <div>
-        <h2>About Me</h2>
-        <p>I am a passionate web developer creating beautiful websites.</p>
-    </div>
+    <h2 id="typing"></h2>
+    <p>I create modern responsive websites</p>
+    <button onclick="scrollToContact()">Hire Me</button>
 </section>
 
 <!-- Services -->
@@ -42,21 +30,18 @@
     <div class="cards">
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-            <h3>Web Design</h3>
-            <p>Modern HTML CSS websites</p>
+            <h3>Website Design</h3>
+            <p>Modern websites</p>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
-            <h3>Projects</h3>
-            <p>Student project websites</p>
+            <h3>Landing Pages</h3>
+            <p>Attractive UI</p>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
-            <h3>Landing Page</h3>
-            <p>Attractive landing pages</p>
+            <h3>Student Projects</h3>
+            <p>College websites</p>
         </div>
 
     </div>
@@ -65,12 +50,21 @@
 <!-- Contact -->
 <section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: vaibhavi@email.com</p>
+
+    <form onsubmit="sendMessage(event)">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+
+    <p id="msg"></p>
 </section>
 
 <footer>
     <p>© 2026 Vaibhavi Codes</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
-      </html>
+</html>
